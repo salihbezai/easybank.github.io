@@ -1,0 +1,194 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Public Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+nav {
+  background-color: #fff;
+  height: 59px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  z-index: 70;
+}
+
+nav svg {
+  cursor: pointer;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul a {
+  text-decoration: none;
+  margin-left: 15px;
+  color: #9698a6;
+}
+
+nav ul a:hover {
+  border-bottom: 3px solid #31d35c;
+}
+
+#btn_request_invite {
+  padding: 10px 20px;
+  border-radius: 10px;
+  width: 130px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  background: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
+  background: linear-gradient(to right, #31d35c, #2bb7da);
+}
+
+#btn_request_invite:hover {
+  opacity: 0.7;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0px 131px;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.header_top {
+  background-image: url("./images/bg-intro-desktop.svg");
+  height: 684px;
+  background-repeat: no-repeat;
+  background-position: 150% -274%;
+  background-size: 70% 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  position: relative;
+  z-index: 40;
+}
+
+.header_top .header-text-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+  padding: 30px 0;
+  max-width: 500px;
+  margin-left: 10%;
+}
+
+.header_top .header-text-btn h1 {
+  padding-bottom: 20px;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.header_top .header-text-btn p {
+  padding-bottom: 20px;
+  line-height: 1.4rem;
+  color: #9698a6;
+  font-weight: bold;
+}
+
+.header_top img {
+  width: 45%;
+  position: absolute;
+  right: -76px;
+  top: -36px;
+  z-index: 60;
+}
+
+@media screen and (max-width: 973px) {
+  .header_top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    flex-direction: column-reverse;
+  }
+}
+
+.why_easy_bank {
+  height: 100%;
+  background-color: #f3f4f6;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10% 10%;
+}
+
+.why_easy_bank .text h1 {
+  padding-bottom: 20px;
+  max-width: 100%;
+  margin-top: 15px;
+}
+
+.why_easy_bank .text p {
+  max-width: 64%;
+  line-height: 1.4rem;
+  color: #9698a6;
+  margin-top: 15px;
+}
+
+.why_easy_bank .features {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  margin-top: 62px;
+  gap: 19px;
+}
+
+.why_easy_bank .features .features-box h4 {
+  margin-top: 32px;
+}
+
+.why_easy_bank .features .features-box p {
+  max-width: 100%;
+  line-height: 1.4rem;
+  margin-top: 26px;
+  font-size: 16px;
+}
+/*# sourceMappingURL=style.css.map */
