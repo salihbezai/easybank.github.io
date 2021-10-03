@@ -28,7 +28,6 @@ const show_hamburger_icon =()=>{
     hamburger.style.display = 'block'
     x_icon.style.display = 'none'
     hide_menu_of_mobile()
-    x_icon_last_state = false;
 }
 // hide both icons
 const hide_both_icons =()=>{
@@ -40,6 +39,7 @@ icon.addEventListener('click',()=>{
         show_x_icon()
     }else{
         show_hamburger_icon()
+        x_icon_last_state = false;
     }
 })
 
@@ -54,6 +54,7 @@ const check_window_width = ()=>{
         hide_menu_of_mobile()
         hide_both_icons()
     }
+    console.log(x_icon_last_state)
 }
 
 window.addEventListener('resize',check_window_width)
