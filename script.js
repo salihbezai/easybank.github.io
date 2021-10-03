@@ -28,6 +28,7 @@ const show_hamburger_icon =()=>{
     hamburger.style.display = 'block'
     x_icon.style.display = 'none'
     hide_menu_of_mobile()
+    x_icon_last_state = false;
 }
 // hide both icons
 const hide_both_icons =()=>{
