@@ -58,3 +58,9 @@ const check_window_width = ()=>{
 }
 
 window.addEventListener('resize',check_window_width)
+
+
+
+
+// Note 1
+// you shoul take a loog at the height of header_top
