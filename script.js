@@ -5,6 +5,7 @@ const x_icon = document.querySelector('.x-icon')
 const g = icon.childNodes[1].childNodes[1];
 const navlist = document.getElementById('navlist');
 let x_icon_last_state = false;
+
 // show menu for mobile
 const show_menu_for_mobile=()=>{
         navlist.classList.remove('nav-items')
@@ -54,7 +55,6 @@ const check_window_width = ()=>{
         hide_menu_of_mobile()
         hide_both_icons()
     }
-    console.log(x_icon_last_state)
 }
 
 window.addEventListener('resize',check_window_width)

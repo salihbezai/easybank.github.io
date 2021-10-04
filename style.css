@@ -40,10 +40,29 @@ nav .mobile-items {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  top: 82px;
-  left: 0;
-  width: 100%;
-  height: 124px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 50px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 8%);
+          transform: translate(-50%, 8%);
+  width: 88%;
+  height: 200px;
+  padding: 10px 10px;
+  -webkit-box-shadow: 1px 1px 1px 1px gray;
+          box-shadow: 1px 1px 1px 1px gray;
+  border-radius: 5px;
+}
+
+nav .mobile-items li {
+  padding: 6px 0px;
+}
+
+nav .mobile-items li a {
+  margin-left: 0px;
+  color: black;
+  font-weight: 700;
 }
 
 nav .icon {
@@ -143,7 +162,7 @@ nav ul a:hover {
 
 .header_top {
   background-image: url("./images/bg-intro-desktop.svg");
-  height: 684px;
+  height: 1000px;
   background-repeat: no-repeat;
   background-position: 150% -274%;
   background-size: 70% 95%;
@@ -172,6 +191,13 @@ nav ul a:hover {
   margin-left: 10%;
 }
 
+@media screen and (max-width: 755px) {
+  .header_top .header-text-btn {
+    margin-left: 0%;
+    text-align: center;
+  }
+}
+
 .header_top .header-text-btn h1 {
   padding-bottom: 20px;
   font-size: 50px;
@@ -195,8 +221,17 @@ nav ul a:hover {
 
 @media screen and (max-width: 973px) {
   .header_top img {
-    left: 25%;
-    top: -18px;
+    left: 50%;
+    top: 4px;
+    -webkit-transform: translate(-50%, -119px);
+            transform: translate(-50%, -119px);
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: 755px) {
+  .header_top img {
+    width: 100%;
   }
 }
 
@@ -237,6 +272,19 @@ nav ul a:hover {
   margin-top: 15px;
 }
 
+@media screen and (max-width: 973px) {
+  .why_easy_bank .text p {
+    max-width: 100%;
+    padding: 0px 8px;
+  }
+}
+
+@media screen and (max-width: 973px) {
+  .why_easy_bank .text {
+    text-align: center;
+  }
+}
+
 .why_easy_bank .features {
   display: -ms-grid;
   display: grid;
@@ -257,12 +305,37 @@ nav ul a:hover {
   font-size: 16px;
 }
 
+@media screen and (max-width: 973px) {
+  .why_easy_bank .features .features-box p {
+    padding: 0px 11px;
+  }
+}
+
+@media screen and (max-width: 973px) {
+  .why_easy_bank .features .features-box {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 973px) {
+  .why_easy_bank .features {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
 .articles_section {
   display: block;
   width: 100%;
-  height: 100%;
+  height: 900px;
   padding: 10% 10%;
   background-color: #fafafa;
+}
+
+@media screen and (max-width: 973px) {
+  .articles_section {
+    height: 100%;
+  }
 }
 
 .articles_section h1 {
@@ -275,10 +348,26 @@ nav ul a:hover {
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+  height: 100%;
+}
+
+@media screen and (max-width: 973px) {
+  .articles {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
 }
 
 .articles article {
   background-color: #fff;
+  height: 100%;
+}
+
+@media screen and (max-width: 973px) {
+  .articles article {
+    text-align: center;
+    padding: 29px 29px;
+  }
 }
 
 .articles article img {
