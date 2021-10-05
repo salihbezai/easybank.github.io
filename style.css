@@ -200,6 +200,11 @@ nav .nav-items .list_link.fade {
       align-content: center;
 }
 
+.main {
+  position: relative;
+  overflow: hidden;
+}
+
 .header_top {
   background-image: url("./images/bg-intro-desktop.svg");
   background-color: #fafafa;
@@ -214,7 +219,6 @@ nav .nav-items .list_link.fade {
       -ms-flex-align: center;
           align-items: center;
   overflow: hidden;
-  position: relative;
   z-index: 40;
 }
 
@@ -233,13 +237,25 @@ nav .nav-items .list_link.fade {
 
 @media screen and (max-width: 547px) {
   .header_top {
-    height: 772px;
+    height: 900px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .header_top {
+    background-position: top -275px right -110px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .header_top {
+    background-position: top -400px right -134px;
   }
 }
 
 @media screen and (max-width: 280px) {
   .header_top {
-    background-position: top -186px right -207px;
+    background-position: top -382px right -130px;
   }
 }
 
@@ -309,6 +325,13 @@ nav .nav-items .list_link.fade {
             transform: translate(-50%, -44px);
     -webkit-transform: translate(-50%, -108px);
             transform: translate(-50%, -108px);
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .header_top img {
+    -webkit-transform: translate(-50%, -44px);
+            transform: translate(-50%, -44px);
   }
 }
 

@@ -178,6 +178,11 @@ nav {
     align-content: center;
     
 }
+// main 
+.main {
+    position: relative;
+    overflow: hidden;
+}
 // top header
 .header_top {
     background-image: url("./images/bg-intro-desktop.svg");
@@ -189,20 +194,27 @@ nav {
     display: flex;
     align-items: center;
     overflow: hidden;
-    position: relative;
     z-index: 40;
     @media screen and (max-width:975px){
         height: 1000px;
     }
+    
     @media screen and (max-width:755px){
         background-position: top -186px right -64px;
         background-size: 129% 100%;
     }
     @media screen and (max-width:547px){
-        height: 772px;
+        height: 900px;
     }
+    @media screen and (max-width:414px){
+        background-position: top -275px right -110px;
+    }
+    @media screen and (max-width:360px){
+        background-position: top -400px right -134px;
+    }
+    
     @media screen and (max-width:280px){
-        background-position: top -186px right -207px;
+        background-position: top -382px right -130px;
     }
     
     .header-text-btn{
@@ -248,6 +260,9 @@ nav {
             @media screen and (max-width:540px) {
                 transform:translate(-50%, -44px);
                 transform: translate(-50%, -108px);
+                }
+            @media screen and (max-width:280px) {
+               transform: translate(-50%, -44px);
                 }
         }
   
