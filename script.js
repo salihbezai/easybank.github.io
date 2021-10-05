@@ -4,17 +4,33 @@ const hamburger = document.querySelector('.hamburger')
 const x_icon = document.querySelector('.x-icon')
 const g = icon.childNodes[1].childNodes[1];
 const navlist = document.getElementById('navlist');
+const links = document.querySelectorAll('.nav-items li')
 let x_icon_last_state = false;
 
+
+
+// add fade for li links 
+const add_fade =()=>{
+    links.forEach((link)=>{
+        link.classList.add('fade')
+    })
+}
+// remove fade class 
+const remove_fade =()=>{
+    links.forEach((link)=>{
+        link.classList.remove('fade')
+    })
+}
 // show menu for mobile
 const show_menu_for_mobile=()=>{
-        navlist.classList.remove('nav-items')
-        navlist.classList.add('mobile-items')
+    navlist.classList.add('open')
+    add_fade()
 }
 
 const hide_menu_of_mobile=()=>{
-    navlist.classList.remove('mobile-items')
-    navlist.classList.add('nav-items')
+    navlist.classList.remove('open')
+    remove_fade()
+    
 }
 
 
@@ -62,5 +78,3 @@ window.addEventListener('resize',check_window_width)
 
 
 
-// Note 1
-// you shoul take a loog at the height of header_top

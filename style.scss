@@ -7,6 +7,7 @@ $brightCyan:hsl(192, 70%, 51%);
 $lightBlue:hsl(220, 16%, 96%);
 $darkBlue:hsl(233, 26%, 24%);
 $darkBlack:hsl(0,0%,0%);
+$brightGreen:#2dbeba;
 // fonts
 $fontFamily:"Public Sans", sans-serif;
 $bodyFontSize:18px;
@@ -20,6 +21,8 @@ $fontWeights:(
 
 // paragraph 
 $pLineHieght:1.4rem;
+
+//button request invite mixin code 
 @mixin btn_request_invite {
     padding: 10px 20px;
     border-radius: 10px;
@@ -55,36 +58,25 @@ nav {
     align-items: center;
     position: fixed;
     z-index: 70;
-    
-    .mobile-items {
-        display: flex;
-        flex-direction: column;
-        background-color: $primaryColor;
-        align-items: center;
-        position: absolute;
-        justify-content: center;
-        top: 50px;
-        left: 50%;
-        transform: translate(-50%,8%);
-        width: 88%;
-        height: 200px;
-        padding: 10px 10px;
-        box-shadow: 1px 1px 1px 1px gray;
-        border-radius: 5px;
-        li{
-            padding: 6px 0px;
-            a {
-                margin-left: 0px;
-                color: $darkBlack;
-                font-weight: map-get($fontWeights,bbold);
-            }
+    @media screen and (max-width:755px) {
+        padding: 0% 2%;
+        justify-content: space-between;
+    }
+    .nav-items.open{
+        
+        @media screen and (max-width:755px) {
+            clip-path: circle(1000px at 90% -10%);
+            -webkit-clip-path: circle(1000px at 90% -10%);
+            pointer-events: all; 
         }
     }
     .icon {
-        width: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        width: 10%;
+        
+        position: absolute;
+        z-index: 1000;
+        left: 90%;
+        
     }
     .hamburger {
         display: none;
@@ -98,21 +90,71 @@ nav {
     svg {
         cursor: pointer;
     }
-    ul{
+    .nav-items{
         display: flex;
         @media screen and (max-width:755px) {
-            display: none;
+        position: fixed;
+        background: $primaryColor;
+        display: flex;
+        align-items: center;
+        padding: 40px 10px;
+        box-shadow: 1px 1px 1px 1px gray;
+        height: 100vh;
+        left: 0;
+        top: 0;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(50px at 90% -40%);
+        -webkit-clip-path: circle(50px at 90% -40%);
+        pointer-events: none;
+        transition: all 1.6s ease-out;
+        z-index: 999;
         }
-        li {
+    
+        .list_link {
             list-style: none;
+            @media screen and (max-width:755px) {
+                padding: 6px 0px;
+                opacity: 0;
+                &:nth-child(1){
+                    transition: all 0.5s ease 0.1s;
+                }
+                &:nth-child(2){
+                    transition: all 0.5s ease 0.3s;
+                }
+                &:nth-child(3){
+                    transition: all 0.5s ease 0.5s;
+                }
+                &:nth-child(4){
+                    transition: all 0.5s ease 0.7s;
+                }
+                &:nth-child(5){
+                    transition: all 0.5s ease 0.9s;
+                }
+            }
         }
+        
         a {
             text-decoration: none;
             margin-left: 15px;
             color: $grayishBlue;
             &:hover{
-                border-bottom: 3px solid $limeGreen;
+                border-bottom: 3px solid $brightGreen;
+                padding-bottom: 16px;
             }
+
+            @media screen and (max-width:755px) {
+                margin-left: 0px;
+                color: $darkBlue;
+                font-weight: map-get($fontWeights,bbold);
+                &:hover{
+                    padding-bottom: 0px;
+                }
+            }
+        }
+        
+        .list_link.fade {
+            opacity: 1;
         }
         }
        
@@ -139,6 +181,7 @@ nav {
 // top header
 .header_top {
     background-image: url("./images/bg-intro-desktop.svg");
+    background-color: #fafafa;
     height: 600px;
     background-repeat: no-repeat;
     background-position: 150% -274%;
@@ -158,6 +201,10 @@ nav {
     @media screen and (max-width:547px){
         height: 772px;
     }
+    @media screen and (max-width:280px){
+        background-position: top -186px right -207px;
+    }
+    
     .header-text-btn{
         display: flex;
         flex-direction: column;
@@ -196,7 +243,12 @@ nav {
            }
            @media screen and (max-width:755px) {
             width: 100%;
-       }
+            transform:translate(-50%, -44px);
+            }
+            @media screen and (max-width:540px) {
+                transform:translate(-50%, -44px);
+                transform: translate(-50%, -108px);
+                }
         }
   
 @media screen and (max-width:973px) {
@@ -298,6 +350,10 @@ nav {
             text-align: center;
             padding: 29px 29px;
         }
+        @media screen and (max-width:280px){
+            text-align: center;
+            padding: 15px 2px;
+        }
         img{
             width: 100%;
             height: 45%;
@@ -311,6 +367,10 @@ nav {
             }
             h4 {
                 padding-top: 10px;
+                &:hover{
+                    color: #2dbeba;
+                    cursor: pointer;
+                }
             }
             p {
                 padding-top: 10px;
@@ -339,11 +399,15 @@ nav {
         .social-media {
             display: flex;
             flex-direction: row;
+            
                 li{
                     list-style: none;
                     a{
                         padding-left: 10px;
                         text-decoration: none;
+                        &:hover{
+                            filter: invert(63%) sepia(93%) saturate(370%) hue-rotate(127deg) brightness(88%) contrast(81%);;
+                        }
                     }
                 }
         }
@@ -375,6 +439,9 @@ nav {
             a {
                 text-decoration: none;
                 color: $primaryColor;
+                &:hover{
+                    color: #2dbeba;
+                }
             }
         }
     }
@@ -387,6 +454,11 @@ nav {
     align-items: center;
     #btn_request_invite_footer {
         @include btn_request_invite;
+        opacity: 0.9;
+        &:hover{
+            opacity: 1;
+            transition: 0.3s;
+        }
     }
     span{
         color: $primaryColor;
